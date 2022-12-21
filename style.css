@@ -9,7 +9,8 @@ body {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-attachment: fixed;       
+       position: fixed;   
+      transform: translate3d(0,0,0);
       top: 0;
        left: 0;
        right: 0;
