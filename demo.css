@@ -1,20 +1,15 @@
-body {
-    width: 100vw;
-    --color-darkblue: darkblue;
-    color: white;
-  }
-  
-  body::before {
-    content: '';
+body:before {
+    content: "";
+    display: block;
     position: fixed;
-    top: 0;
     left: 0;
-    height: 100vh;
+    top: 0;
     width: 100%;
-    z-index: -1;
-    background: var(--color-darkblue);
-    background-image: linear-gradient(rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(bg-2.jpg);
+    height: 100%;
+    z-index: -10;
+    background: url(bg-2.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
   }
