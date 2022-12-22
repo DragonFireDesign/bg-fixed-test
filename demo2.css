@@ -1,16 +1,36 @@
-html::before {
-    content: ' ';
-    display: block;
-    background-image: url('bg-2.jpg');
-    background-position: bottom left; 
-    /*For my instance this is how I have built my bg image. Indexes off the 
-bottom left for consistency*/
+/* Responsive Full Background Image Using CSS
+ * Tutorial URL: http://sixrevisions.com/css/responsive-background-image/
+*/
+body {
+    /* Location of the image */
+    background-image: url(bg-2.jpg);
+    
+    /* Image is centered vertically and horizontally at all times */
+    background-position: center center;
+    
+    /* Image doesn't repeat */
+    background-repeat: no-repeat;
+    
+    /* Makes the image fixed in the viewport so that it doesn't move when 
+       the content height is greater than the image height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based on its container's size */
     background-size: cover;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    z-index: -10; 
-    /*I haven't tested my full app functionality after changing the z-index, but everything appears to work flawlessly right now.*/
-}
+    
+    /* Pick a solid background color that will be displayed while the background image is loading */
+    background-color:#464646;
+    
+    /* SHORTHAND CSS NOTATION
+     * background: url(background-photo.jpg) center center cover no-repeat fixed;
+     */
+  }
+  
+  /* For mobile devices */
+  @media only screen and (max-width: 767px) {
+    body {
+      /* The file size of this background image is 93% smaller
+       * to improve page load speed on mobile internet connections */
+      background-image: url(bg-2.jpg);
+    }
+      }
