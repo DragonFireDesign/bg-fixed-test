@@ -13,7 +13,7 @@ HTML, BODY {
   }
   
 .wrapper {
-  background: url('bg.jpg');
+  background: url('bg-2.jpg');
      background-size: cover !important;
      -webkit-background-size: cover;
       -moz-background-size: cover;
