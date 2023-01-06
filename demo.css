@@ -1,26 +1,37 @@
-.bg {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
+body {
+  position: relative;
+}
+body::after {
+    content: "";
+    background: url('bg-2.jpg');
+     background-size: cover !important;
+     -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 100vh;
+     width: 100%;
+     z-index: -1;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+   /* background-attachment: fixed !important;*/
+}
   @media (min-width: 741px) {
-    .bg {
-      background-image: url(bg-2.jpg);
+    body {
+      background-image: url(/bg-2.jpg);
     }
   }
   @media (orientation: landscape) and (max-width: 740px) {
-    .bg {
-       background-image: url(bg-2.jpg);
+    body{
+       background-image: url(/bg-2.jpg);
     }
   }
   @media (orientation: portrait) and (max-width: 740px) {
-    .bg {
-       background-image: url(bg-2.jpg);
+    body {
+       background-image: url(/bg-2.jpg);
     }
   }
