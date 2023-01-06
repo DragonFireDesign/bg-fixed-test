@@ -1,16 +1,26 @@
-body:before {
-    content: "";
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
+.bg {
     width: 100%;
     height: 100%;
-    z-index: -10;
-    transform: translate3d(0,0,0);
-    background: url(bg-2.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
+  }
+  @media (min-width: 741px) {
+    .bg {
+      background-image: url(/bg-2.jpg);
+    }
+  }
+  @media (orientation: landscape) and (max-width: 740px) {
+    .bg {
+       background-image: url(/bg-2.jpg);
+    }
+  }
+  @media (orientation: portrait) and (max-width: 740px) {
+    .bg {
+       background-image: url(/bg-2.jpg);
+    }
   }
